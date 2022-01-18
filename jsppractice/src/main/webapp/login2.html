@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>식당 등록</title>
+<script type ="text/javascript">
+function fn_sendMember(){
+	var	frmMember = document.frmMember;
+	var name = frmMember.name.value;
+	var type = frmMember.type.value;
+	var menu = frmMember.menu.value;
+	var address = frmMember.address.value;
+	var ph = frmMember.ph.value;
+	
+	frmMember.method = "get";
+	frmMember.action = "launch";
+	frmMember.submit();
+}
+</script>
+
+                                         
+</head>
+<body>
+<form name="frmMember">
+<table>
+ <th>식당 등록!</th>
+<tr>
+	<td>식당명</td>
+	<td><input type="text" name="name"></td>
+	<td>분류</td>
+	<td><input type="text" name="type"></td>
+	<td>메뉴</td>
+	<td><input type="text" name="menu"></td>
+	<td>거리</td>
+	<td><input type="text" name="address"></td>
+	<td>전화번호</td>
+	<td><input type="text" name="ph"></td></tr>
+	</table>
+	<input type="button" value="등록" onclick="fn_sendMember()">
+	<input type="reset" value="다시 입력">
+	<input type="hidden" name="command" value="addMember" />
+</form>
+
+</body>
+</html>
